@@ -1,0 +1,1 @@
+console.log('[npm start] Levantando o servidor da API ...');

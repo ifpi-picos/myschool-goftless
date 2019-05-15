@@ -1,0 +1,1 @@
+console.log('[npm run migrate] Criando as tabelas no banco de dados...');
