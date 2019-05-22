@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+<<<<<<< HEAD
+=======
+
+#Macbook files
+.DS_Store
+
+# Build 
+dist
+>>>>>>> 1.0.0
