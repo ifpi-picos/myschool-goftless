@@ -1,9 +1,8 @@
-import express from 'express';
-import usuariosRoute from './users';
+import express from "express";
+import studentsRoute from "./students";
 
 const router = express.Router();
 
-router.use('/users', usuariosRoute);
-router.get('/', (req, res) => res.send('App Online!'));
+router.use("/students", studentsRoute);
 
 export default router;

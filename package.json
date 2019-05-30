@@ -1,39 +1,28 @@
 {
-  "name": "modelo",
+  "name": "nodejs-and-es6",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint server.js src test",
-    "lint:fix": "eslint server.js src test --fix",
-    "debug": "babel-node --nolazy --inspect-brk=9229 ./server.js",
-    "start": "babel-node ./server.js",
-    "test:integration": "NODE_ENV=test mocha  --exit --require @babel/register --require @babel/polyfill --require test/integration/helpers.js test/integration/**/*_spec.js",
-    "test:unit": "NODE_ENV=test mocha --require @babel/register --require @babel/polyfill test/unit/**/*_spec.js",
-    "test": "npm run test:unit && npm run test:integration",
-    "clean": "rm -rf dist",
-    "compile": "npm run clean && babel . -d dist  --ignore ./node_modules --ignore ./test",
-    "build": "npm run test && npm run compile"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
+    "build": "rimraf dist && babel src -s -D -d dist --presets env",
+    "start": "node dist"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.2.0",
-    "babel-eslint": "^10.0.1",
-    "chai": "^4.2.0",
-    "eslint": "^5.12.0",
-    "mocha": "^5.2.0",
-    "sinon": "^7.2.2",
-    "supertest": "^3.3.0"
-  },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "mongoose": "^5.4.0"
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^5.8.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.19.0",
+    "rimraf": "^2.6.3"
   }
 }

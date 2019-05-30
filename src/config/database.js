@@ -1,22 +1,12 @@
-import mongoose from 'mongoose';
-import Config from './config';
+import Sequelize from "sequelize";
+import Config from "./config";
 
-mongoose.Promise = Promise;
+const url = `postgres://${Config.DB_USER}:${Config.DB_PWD}@${Config.DB_HOST}:${
+  Config.DB_PORT
+}/${Config.DB_NAME}`;
 
-const mongodbUrl = Config.MONGODB_URL;
-const configuracoes = {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  // user: 'database_user',
-  // pass: 'user_password',
-  // auth: {
-  //     authdb: 'admin'
-  // }
-};
-
-const connect = () => mongoose.connect(mongodbUrl, configuracoes);
-
+const sequelize = new Sequelize(url);
 
 export default {
-  connect,
+  sequelize
 };
