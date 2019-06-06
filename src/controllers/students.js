@@ -1,6 +1,7 @@
 export default class StudentController {
   constructor(Student) {
     this.Student = Student;
+    //this.Student.sync({force: true});
   }
 
   async getAll(req, res) {
