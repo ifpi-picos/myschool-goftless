@@ -1,7 +1,6 @@
 export default class CoordinatorController {
   constructor(Coordinator) {
     this.Coordinator = Coordinator;
-    //this.Coordinator.sync({force: true});
   }
 
   async getAll(req, res) {

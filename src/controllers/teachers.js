@@ -1,7 +1,6 @@
 export default class TeacherController {
   constructor(Teacher) {
     this.Teacher = Teacher;
-    //this.Teacher.sync({force: true});
   }
 
   async getAll(req, res) {

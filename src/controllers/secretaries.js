@@ -1,7 +1,6 @@
 export default class SecretaryController {
   constructor(Secretary) {
     this.Secretary = Secretary;
-    //this.Secretary.sync({force: true});
   }
 
   async getAll(req, res) {

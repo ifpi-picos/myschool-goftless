@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
     "build": "rimraf dist && babel src -s -D -d dist --presets env",
-    "start": "node dist"
+    "start": "node dist",
+    "migrate": "babel-node src/migrate.js --presets env"
   },
   "keywords": [],
   "author": "",

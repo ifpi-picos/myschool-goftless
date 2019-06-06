@@ -1,7 +1,6 @@
 export default class ResponsibleController {
   constructor(Responsible) {
     this.Responsible = Responsible;
-    //this.Responsible.sync({force: true});
   }
 
   async getAll(req, res) {
