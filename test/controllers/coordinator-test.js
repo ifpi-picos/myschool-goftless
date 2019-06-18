@@ -6,11 +6,11 @@ import app from "../../src/index";
 chai.use(chaiHttp);
 const expect = chai.expect;
 
-describe("Secretary Controller Testing:", ()=>{
+describe("Coordinator Controller Testing:", ()=>{
 
-  it("Return all secretaries", (done)=>{
+  it("Return all coordinators", (done)=>{
     chai.request(app)
-    .get('/secretaries')
+    .get('/coordinators')
     .end((err, res)=>{
       expect(res).to.have.status(200);
       expect(res.body).to.be.a('array');
